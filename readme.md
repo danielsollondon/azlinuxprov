@@ -1,12 +1,12 @@
 # Private Preview : Removing the Azure Linux Agent
 
 # Step 1 : Create custom image
-If the Linux image does not contain agent 2.2.32 ('waagent -version'), then you will need to create a custom image with this baked in.
+If the Linux image does not contain agent 2.2.32 ('waagent -version'), then you will need to create a custom image with this baked in. For more information of version indentification see this [doc](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/build-image-with-packer).
 
 There are multiple ways to create custom images in the example here, this repo contains Packer and Azure Resource Manager Templates.
 
-For a sample Packer config to bake in the 2.2.32 agent, see this [repo](https://github.com/danielsollondon/azlinuxprov), 
-deploy the config:
+For full details of creating Azure images with Packer, see [Azure docs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/build-image-with-packer). 
+Deploying the Packer config:
 ```bash
  ./packer build /../packerconfig.json
 ```
