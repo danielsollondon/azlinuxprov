@@ -38,17 +38,16 @@
         "publicIpAddressSku": {
             "type": "string"
         },
-        "customData":{ 
+        "imageName":{ 
             "type": "string"
         },
-        "rgname":{ 
+        "rgName":{ 
             "type": "string"
         }
     },
     "variables": {
-        "vnetId": "[resourceId(parameters('rgname'),'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
+        "vnetId": "[resourceId(parameters('rgName'),'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
-        "imageName": "centos75master",
         "extensionName": "CustomScript"
     },
     "resources": [
@@ -64,7 +63,6 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[parameters('adminUsername')]",
-                    "customData": "[parameters('customData')]",
                     "linuxConfiguration": {
                         "disablePasswordAuthentication": "true",
                         "provisionVMAgent": false,
@@ -84,7 +82,7 @@
               
                 "storageProfile": {
                     "imageReference": {
-                        "id": "[resourceId('Microsoft.Compute/images', variables('imageName'))]"
+                        "id": "[resourceId('Microsoft.Compute/images', parameters('imageName'))]"
                     },
                     "osDisk": {
                         "createOption": "fromImage",
