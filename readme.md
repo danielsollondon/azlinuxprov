@@ -1,4 +1,4 @@
-# Public Preview : Removing the Azure Linux Agent from RHEL 7.6 / CentOS 7.6
+# Private Preview : Removing the Azure Linux Agent from RHEL 7.6 / CentOS 7.6
 
 # Step 1 : Create custom image
 If the Linux image does not contain agent 2.2.32 ('waagent --version'), then you will need to create a custom image with the upgraded version baked in. At the time of this doc update 4th April 2019, RHEL 7.6 (RedHat:Rhel:7-RAW:latest) did not have >=2.2.32.
