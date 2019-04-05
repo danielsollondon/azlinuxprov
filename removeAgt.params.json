@@ -6,10 +6,10 @@
             "value": ""
         },
         "virtualMachineName": {
-            "value": ""
+            "value": "vm0011109"
         },
         "virtualMachineSize": {
-            "value": ""
+            "value": "Standard_DS1"
         },
         "adminUsername": {
             "value": ""
@@ -18,10 +18,10 @@
             "value": ""
         },
         "networkInterfaceName": {
-            "value": ""
+            "value": "vm0011109nic"
         },
         "networkSecurityGroupName": {
-            "value": ""
+            "value": "vm0011109nsg"
         },
         "adminPublicKey": {
             "value": ""
@@ -30,19 +30,19 @@
             "value": ""
         },
         "publicIpAddressName": {
-            "value": ""
+            "value": "vm001110923ip"
         },
         "publicIpAddressType": {
-            "value": ""
+            "value": "Dynamic"
         },
         "publicIpAddressSku": {
-            "value": ""
+            "value": "Basic"
         },
-        "customData": {
-            "value": ""
+        "imageName": {
+            "value": "<userChosenImageName>"
         },
-        "rgname":{
-            "value": ""
+        "rgName":{
+            "value": "<resourceGroupName>"
         }
     }
 }
